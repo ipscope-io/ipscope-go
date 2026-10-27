@@ -75,7 +75,7 @@ func WithUserAgent(userAgent string) Option {
 // Client is the official concurrency-safe Go server-side client for the IPScope IP Intelligence API.
 //
 // It exposes strictly IP intelligence, CIDR network prefix, dataset metadata, feedback, and status
-// operations — with zero account, wallet, or billing operations.
+// operations - with zero account, wallet, or billing operations.
 type Client struct {
 	transport    *httpTransport
 	ipCache      *lruTTLCache[*IPLookupResponse]

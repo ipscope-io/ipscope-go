@@ -1,4 +1,4 @@
-# `ipscope-go` — Official IPScope Server-Side Go SDK
+# `ipscope-go` - Official IPScope Server-Side Go SDK
 
 Official zero-dependency, concurrency-safe, strictly typed server-side **Go SDK** (`github.com/ipscope/ipscope-go`) for the **IPScope IP Intelligence Platform**.
 
