@@ -1,0 +1,32 @@
+name: Publish Go Module to proxy.golang.org
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Index Module on pkg.go.dev
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go 1.23
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.23.x"
+
+      - name: Vet & Test
+        run: |
+          go vet ./...
+          go test -v -race ./...
+
+      - name: Trigger proxy.golang.org & pkg.go.dev indexing
+        run: |
+          TAG="${GITHUB_REF_NAME:-v1.0.0}"
+          curl -fsSL "https://proxy.golang.org/github.com/ipscope-io/ipscope-go/@v/${TAG}.info" || true
