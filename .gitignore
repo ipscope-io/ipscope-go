@@ -1,0 +1,22 @@
+# OS & Editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Build & Runtime Artifacts
+node_modules/
+dist/
+target/
+build/
+bin/
+obj/
+vendor/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.gem
+*.jar
+*.class
+*.pyc

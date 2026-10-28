@@ -1,6 +1,6 @@
 # `ipscope-go` - Official IPScope Server-Side Go SDK
 
-Official zero-dependency, concurrency-safe, strictly typed server-side **Go SDK** (`github.com/ipscope/ipscope-go`) for the **IPScope IP Intelligence Platform**.
+Official zero-dependency, concurrency-safe, strictly typed server-side **Go SDK** (`github.com/ipscope-io/ipscope-go`) for the **IPScope IP Intelligence Platform**.
 
 > **Scope Notice:** This SDK is intentionally scoped strictly to **IP intelligence, network prefix, dataset metadata, feedback, and health operations**. It contains **zero account, billing, wallet, or key-management operations**, making it safe to deploy in production backend microservices, workers, and API gateways.
 
@@ -23,7 +23,7 @@ Official zero-dependency, concurrency-safe, strictly typed server-side **Go SDK*
 ## Installation
 
 ```bash
-go get github.com/ipscope/ipscope-go
+go get github.com/ipscope-io/ipscope-go
 ```
 
 ---
@@ -39,7 +39,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/ipscope/ipscope-go"
+	"github.com/ipscope-io/ipscope-go"
 )
 
 func main() {
