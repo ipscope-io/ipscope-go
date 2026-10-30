@@ -44,7 +44,7 @@ import (
 
 func main() {
 	client, err := ipscope.NewClient(
-		"ips_live_your_api_key_here",
+		"<public>:<private>",
 		ipscope.WithTimeout(5*time.Second),
 	)
 	if err != nil {
